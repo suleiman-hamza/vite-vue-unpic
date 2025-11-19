@@ -31,24 +31,17 @@ export default defineConfig({
 
             let match = imgTagRegex.exec(code)
 
-            if (!match) {
-              return {
-                code,
-                map: null,
-              }
-            }
-
             do {
-              const srcValue = match[1]
+              const srcValue = match![1]
 
               const img = await readFile(join(resolvedConfig.publicDir, srcValue))
               const data = await getPixels(img)
               const blurhash = encode(Uint8ClampedArray.from(data.data), data.width, data.height, 4, 4)
 
-              const imgTagStart = match.index
-              const imgTagEnd = imgTagStart + match[0].length
+              const imgTagStart = match!.index
+              const imgTagEnd = imgTagStart + match![0].length
 
-              const newImgTag = match[0].replace(
+              const newImgTag = match![0].replace(
                 /<img(\s+)/,
                 `<img$1width="${data.width}" height="${data.height}" style="background-size: cover; background-image: url(${blurhashToDataUri(blurhash)});" loading="lazy" `,
               )
