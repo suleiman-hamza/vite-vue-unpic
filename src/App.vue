@@ -1,12 +1,12 @@
 <template>
   <div>
-    <img src="/steve-busch-tHfRemjLK4M-unsplash.jpg" />
+    <img src="/steve-busch-tHfRemjLK4M-unsplash.jpg">
 
-   <p>
-    Photo by Steve Busch on Unsplash
-   </p>
+    <p>
+      Photo by Steve Busch on Unsplash
+    </p>
 
-    <img src="/steve-busch-tHfRemjLK4M-unsplash.jpg" />
+    <img src="/steve-busch-tHfRemjLK4M-unsplash.jpg">
 
     <p>
       Photo by Steve Busch on Unsplash
